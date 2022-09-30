@@ -3,23 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Alert;
 
-class AlertController extends Controller
+class MessageController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function newAlert(Request $request){
-        //New alert function
-        //$request->user()->id;
-        $alert = new Alert();
-        $alert->message = $request->get('message');
-        $alert->token   = $request->get('token');
-        
-    }
     public function index()
     {
         //
