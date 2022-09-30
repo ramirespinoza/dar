@@ -12,7 +12,9 @@ class AlertController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function newAlert(Request $request){
-        //New alert function 
+        //New alert function
+        $request->user()->id;
+        
     }
     public function index()
     {
