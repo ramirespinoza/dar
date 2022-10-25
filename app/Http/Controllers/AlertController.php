@@ -15,9 +15,37 @@ class AlertController extends Controller
     public function newAlert(Request $request){
         //New alert function
         //$request->user()->id;
-        $alert = new Alert();
-        $alert->message = $request->get('message');
-        $alert->token   = $request->get('token');
+       
+
+        try {
+            $this->validate($request, [
+                'message' => 'required',
+                'token' => 'required',
+                ]);
+
+                $alert = new Alert();
+                $alert->message = $request->get('message');
+                $alert->token   = $request->get('token');
+                $alert->save();
+
+                return response()->json([
+                    'customer' => $request->all(),
+                    'operation' => 'create',
+                    'status' => 'success',
+                    'code' => '1'
+                ]);
+                
+        } catch (\Throwable $th) {
+        
+            return response()->json([
+            'customer' => $request->all(),
+            'operation' => 'create',
+            'status' => 'failed',
+            'code' => '0'
+            ]);
+        }
+
+        
         
     }
     public function index()
