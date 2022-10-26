@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AlertController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('alert');
 });
+Route::get('/',[AlertController::class, 'create'])->name('mostrarcate');
+Route::get('/',[AlertController::class, 'index'])->name('mostrar');

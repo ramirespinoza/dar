@@ -10,14 +10,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
+    <style>
+        .logos{
 
+            width: 250px;
+            height: 250px;
+            position: fixed;
+            left: 10px;
+
+        }
+
+        .tabla{
+            margin: 150px auto;
+            width: 1200px;
+
+        }
+
+    </style>
 </head>
 
 <body>
 
 
 
-
+<div>
+    <img class="logos" src="{{ asset('img/logo.jpg') }}" alt="" class="imgPerfil">
+</div>
 <center><h1>Detector AntiRobo</h1></center>
 
 
@@ -29,7 +47,7 @@
                             <button class="btn btn-outline-secondary"
                                     type="button"
                                     id="alert"
-                                    name="alert">
+                                    >
                             <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
                             Buscar</button>
                         </div>
@@ -44,18 +62,19 @@
     <tr class="table-success">
       <th scope="col">#</th>
       <th scope="col">Mensaje</th>
-      <th scope="col">Alerta</th>
       <th scope="col">Usuario</th>
         <th scope="col">Creado</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
+  @foreach($alerts as $alert )
+      <tr>
+          <td>{{$alert->id}}</td>
+          <td>{{$alert->message_id}}</td>
+          <td>{{$alert->user_chat_id}}</td>
+          <td>{{$alert->created_at}}</td>
+      </tr>
+  @endforeach
 
 
   </tbody>
