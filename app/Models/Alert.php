@@ -13,6 +13,6 @@ class Alert extends Model
 
     protected $fillable = [
         'message_id',
-        'chat_id'
+        'user_chat_id'
     ];
 }
