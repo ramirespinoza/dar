@@ -11,12 +11,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
 
+    <style>
+        .logos{
+
+            width: 250px;
+            height: 250px;
+            position: fixed;
+            left: 10px;
+
+        }
+
+        .tabla{
+            margin: 150px auto;
+            width: 1200px;
+
+        }
+
+    </style>
+
+
+
 </head>
 
 <body>
 
 
-
+<div>
+    <img class="logos" src="{{ asset('img/logo.jpg') }}" alt="" class="imgPerfil">
+</div>
 
 <center><h1>Detector AntiRobo</h1></center>
 
