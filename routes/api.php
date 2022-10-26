@@ -19,4 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('alert', [AlertController::class, 'newAlert'])->name('api-customers-alert');
+Route::post('/alert', [AlertController::class, 'newAlert'])->name('api-customers-alert');
+
+Route::get('/createUser', [UserController::class, 'newAlert'])->name('api-customers-alert');

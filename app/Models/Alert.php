@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Alert extends Model
 {
     use HasFactory;
+
+    protected $table = "alert";
+
+    protected $fillable = [
+        'message_id',
+        'chat_id'
+    ]
 }

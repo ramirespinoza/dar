@@ -17,6 +17,12 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+
+    protected $keyType = 'string';
+    protected $primaryKey = 'chat_id';
+    public $incrementing = false;
+
     protected $fillable = [
         'name',
         'email',
