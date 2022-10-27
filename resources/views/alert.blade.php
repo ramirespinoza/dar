@@ -24,7 +24,6 @@
             margin: 150px auto;
             width: 1200px;
 
-        }
 
     </style>
 </head>
@@ -32,10 +31,10 @@
 <body>
 
 
-
 <div>
     <img class="logos" src="{{ asset('img/logo.jpg') }}" alt="" class="imgPerfil">
 </div>
+
 <center><h1>Detector AntiRobo</h1></center>
 
 
