@@ -20,13 +20,13 @@ class AlertController extends Controller
 
         try {
             $this->validate($request, [
-                'message' => 'required',
-                'token' => 'required',
+                'message_id' => 'required',
+                'user_chat_id' => 'required',
                 ]);
 
                 $alert = new Alert();
-                $alert->message = $request->get('message');
-                $alert->token   = $request->get('token');
+                $alert->message_id = $request->get('message_id');
+                $alert->user_chat_id   = $request->get('user_chat_id');
                 $alert->save();
 
                 return response()->json([
