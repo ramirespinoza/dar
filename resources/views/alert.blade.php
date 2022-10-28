@@ -40,16 +40,18 @@
 
                 <div class="row">
                     <div class="col-6 offset-3">
+                    <form method="GET" action="/" >
                     <label>Ingresar Token:</label>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Ingrese su Token" aria-label="Ingrese su Token" aria-describedby="button-addon2">
+                            <input type="text" class="form-control" placeholder="Ingrese su Token" aria-label="Ingrese su Token" name="token" aria-describedby="button-addon2">
                             <button class="btn btn-outline-secondary"
-                                    type="button"
+                                    type="submit"
                                     id="alert"
                                     >
                             <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
                             Buscar</button>
                         </div>
+                        </form>
                     </div>
                 </div>
 

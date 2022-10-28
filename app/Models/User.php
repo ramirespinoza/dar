@@ -24,8 +24,8 @@ class User extends Authenticatable
     public $incrementing = false;
 
     protected $fillable = [
-        'name',
-        'email',
+        'chat_id',
+        'username',
         'password',
     ];
 
